@@ -145,24 +145,24 @@ const onCheckboxChange = evt => {
       <h2>User Onboarding</h2>
       
       
-      <div>
-      <NewUser 
-      values={formValues}
-      onInputChange={onInputChange}
-      onCheckboxChange={onCheckboxChange}
-      onSubmit={onSubmit}
-      disabled={formDisabled}
-      errors={formErrors}
-      />
-    
-      {
-        users.map(user => {
-          return (
-            <User key={user.id} details={user} />
-          )
-        })
-      }
-      </div>
+        <div>
+          <NewUser 
+            values={formValues}
+            onInputChange={onInputChange}
+            onCheckboxChange={onCheckboxChange}
+            onSubmit={onSubmit}
+            disabled={formDisabled}
+            errors={formErrors}
+          />
+        
+          {
+            users.map(user => {
+              return (
+                <User key={user.id} details={user} />
+              )
+            })
+          }
+        </div>
     </div>
   )
 }

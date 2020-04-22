@@ -7,16 +7,16 @@ function User({ details }) {
     return (
         
         <div className='user container'>
-        <h2>Name: {details.name}</h2>
-        <h2>Email: {details.email}</h2>
-        <h2>Password: {details.password}</h2>
+            <h2>Name: {details.name}</h2>
+            <h2>Email: {details.email}</h2>
+            <h2>Password: {details.password}</h2>
         
         <div>
             <h2>Terms of Service:</h2> 
-                <li>{details.terms}</li>
+               <p>These are the terms of service that you agreed to.</p>
             
           </div>
-        }
+        
       </div>
     )
   }

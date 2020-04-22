@@ -52,7 +52,7 @@ function NewUser(props){
                 type='checkbox' />
 
             
-            <button onClick={onSubmit} disabled={disabled}>submit</button>
+            <button onClick={onSubmit} disabled={disabled}>agree</button>
             
         </form>
     )
