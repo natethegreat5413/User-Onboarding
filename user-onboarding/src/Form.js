@@ -9,7 +9,7 @@ function NewUser(props){
         disabled,
         errors,
     } = props
-    console.log(values.terms.agree)
+    
     return (
         <form className='User container'>
             <h2>User Form</h2>
@@ -20,7 +20,7 @@ function NewUser(props){
                 <p>{errors.password}</p>
                 <p>{errors.terms}</p>
             </div>
-
+            <br />
             <label>Name: &nbsp;
             <input
                 value={values.name}
@@ -28,7 +28,7 @@ function NewUser(props){
                 name='name'
                 type='text'
                 /></label>
-
+            <br />
             <label>Email: &nbsp;
             <input
                 value={values.email}
@@ -36,7 +36,7 @@ function NewUser(props){
                 name='email'
                 type='text'
                 /></label>
-
+            <br />
                 <label>Password: &nbsp;
                 <input
                     value={values.password}
@@ -44,14 +44,14 @@ function NewUser(props){
                     name='password'
                     type='text'
                     /></label>
-
+            <br />
             <label> Terms of Service </label><input
                 value={values.terms}
                 onChange={onCheckboxChange}
                 name='agree'
                 type='checkbox' />
 
-            
+            <br />
             <button onClick={onSubmit} disabled={disabled}>agree</button>
             
         </form>

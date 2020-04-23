@@ -49,20 +49,7 @@ export default function App() {
   const [formDisabled, setFormDisabled] = useState(true)
   const [formErrors, setFormErrors] = useState(initialFormErrors)
 
-  // const getUsers = () => {
-  //   axios.get(url)
-  //   .then(res => {
-  //     setUsers(res.data)
-  //   })
-  //   .catch(error => {
-
-  //   })
-  // }
-
-  // useEffect(() => {
-  //   getUsers()
   
-  // }, [])
 
   const postUsers = user => {
 
