@@ -1,8 +1,8 @@
 import { v4 as uuid } from 'uuid'
 
 const name = "Nathan"
-const email = `${email}`
-const password = `${password}`
+const email = 'nathancowley12@gmail.com'
+const password = 'password'
 const service = 'agree'
 
 
