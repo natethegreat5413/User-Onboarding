@@ -34,4 +34,15 @@ describe('User Form', () => {
         .click()
         
     })
+
+    // it('check validation message on invalid input', () => {
+    //     cy.get(':nth-child(8) > input')
+    //     .type('')
+    //     .should('have.value', '')
+
+    //     .type(password)
+    //     .should('have.value', password)
+
+        
+    // })
 })

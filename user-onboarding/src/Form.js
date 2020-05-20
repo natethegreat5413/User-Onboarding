@@ -1,61 +1,77 @@
 import React from 'react'
 
-function NewUser(props){
-    const {
+
+function Form(props){
+    const{
         values,
         onInputChange,
-        onCheckboxChange,
         onSubmit,
         disabled,
         errors,
+        onCheckboxChange,
     } = props
-    
-    return (
-        <form className='User container'>
-            <h2>User Form</h2>
+
+
+return (
+    <form className='form container' onSubmit={onSubmit}>
+        <div className='form-group submit'>
+            <h2>Add a User</h2>
             
+
             <div className='errors'>
-                <p>{errors.name}</p>
-                <p>{errors.email}</p>
-                <p>{errors.password}</p>
-                <p>{errors.terms}</p>
+                <div>{errors.name}</div>
+                <div>{errors.email}</div>
+                <div>{errors.password}</div>
+                <div>{errors.terms}</div>
             </div>
-            <br />
-            <label>Name: &nbsp;
-            <input
+        </div>
+
+        <div className='form-group inputs'>
+            <h4>General Information</h4>
+
+            <label>
+                Name&nbsp;
+                <input
                 value={values.name}
                 onChange={onInputChange}
                 name='name'
                 type='text'
-                /></label>
-            <br />
-            <label>Email: &nbsp;
-            <input
+                />
+            </label>
+
+            <label>
+                Email&nbsp;
+                <input
                 value={values.email}
                 onChange={onInputChange}
                 name='email'
-                type='text'
-                /></label>
-            <br />
-                <label>Password: &nbsp;
+                type='email'
+                />
+            </label>
+
+            <label>
+                Password&nbsp;
                 <input
-                    value={values.password}
-                    onChange={onInputChange}
-                    name='password'
-                    type='text'
-                    /></label>
-            <br />
-            <label> Terms of Service </label><input
-                value={values.terms}
-                onChange={onCheckboxChange}
-                name='agree'
-                type='checkbox' />
-
-            <br />
-            <button onClick={onSubmit} disabled={disabled}>agree</button>
+                value={values.password}
+                onChange={onInputChange}
+                name='password'
+                type='password'
+                />
+            </label>
             
-        </form>
-    )
+            <label className='terms'>
+                <input 
+                type='checkbox'
+                name='terms'
+                checked={values.terms}
+                onChange={onCheckboxChange}
+                />
+                Terms of Service
+                 
+            </label>
+            <button disabled={disabled}>Submit</button>
+        </div>
+    </form>
+)
 }
-
-export default NewUser
+export default Form
