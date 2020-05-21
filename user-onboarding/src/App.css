@@ -63,7 +63,7 @@ button {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
-.error {
+.errors {
   font-size: 1.2rem;
   color: red;
 }
