@@ -69,7 +69,7 @@ return (
                 Terms of Service
                  
             </label>
-            <button disabled={disabled}>Submit</button>
+            <button className='submit' disabled={disabled}>Submit</button>
         </div>
     </form>
 )
