@@ -23,7 +23,7 @@ const initialFormErrors = {
 const formSchema = yup.object().shape({
   name: yup.string()
   .trim()
-  .min(3, 'Name must be at least three characters')
+  // .min(3, 'Name must be at least three characters')
   .required('Name is required'),
   email: yup.string()
   .email('The email must be a valid email address')
