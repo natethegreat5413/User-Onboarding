@@ -44,15 +44,10 @@ describe('Submitting Users', () => {
 describe('Form Validation for empty Form', () => {
     it('wont submit if form is empty', () => {
         cy.visit('http://localhost:3000')
-        cy.get('input[name="name"]')
-        .type('')
-        .should('have.value', '')
+        cy.contains('Name is required').should('not.exist')
+        cy.get('input[name="name"]').type('')
+        cy.contains('Name is required').should('exist')
         
-        .type('nate')
-        .should('have.value', 'nate')
-        // cy.contains('Name is required').should('exist')
-        // cy.get('input[name="name"]').type('')
-        // cy.contains('Name is required')
         
     })
 })
